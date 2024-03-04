@@ -12,11 +12,14 @@ public class Hooks {
 
     static WebDriver driver;
 
-    @BeforeAll
+    @Before
     public static void setUp() {
         DriverSingleton.getInstance("chrome");
         driver = DriverSingleton.getDriver();
+
+
     }
+
 
     // automation screenshot
 

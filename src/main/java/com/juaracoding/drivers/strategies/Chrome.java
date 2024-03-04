@@ -8,7 +8,7 @@ public class Chrome implements DriverStrategy {
 
     @Override
     public WebDriver setStrategy() {
-        String path = "C:\\Users\\Verdo Daviarta\\IdeaProjects\\UjianMingguKe3.5.1\\chromedriver-win64\\chromedriver.exe";
+        String path = "C:\\Users\\Personal\\IdeaProjects\\verdo\\chromedriver-win64\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", path);
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("useAutomationExtension",false);

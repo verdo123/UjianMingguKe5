@@ -2,17 +2,21 @@ package com.juaracoding;
 
 import com.juaracoding.drivers.DriverSingleton;
 import com.juaracoding.pages.AddcartPage;
+import com.juaracoding.pages.LoginPage;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class addtocart {
     private static WebDriver driver;
+
+    private static LoginPage loginPage = new LoginPage();
 
     private static AddcartPage addcartPage = new AddcartPage();
 
@@ -20,8 +24,14 @@ public class addtocart {
         driver = Hooks.driver;
     }
 
+
     @Given("Pengguna mengakses halaman produk")
-    public void Pengguna_mengkases_halaman_produk(){driver.get("https://www.saucedemo.com/inventory.html");}
+    public void Pengguna_mengkases_halaman_produk(){
+        driver.get("https://www.saucedemo.com/");
+        loginPage.inputUsername("standard_user");
+        loginPage.inputPassword("secret_sauce");
+        loginPage.clickBtnLogin();
+    }
 
     @When("Pengguna memilih produk yang diinginkan")
     public void Pengguna_memilih_produk_yang_diinginkan(){addcartPage.chooseProducts();}
