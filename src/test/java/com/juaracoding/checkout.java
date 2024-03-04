@@ -62,4 +62,12 @@ public class checkout {
         Assert.assertEquals(checkoutPage.getTxtInvalidOrder(),"Error: First Name is required");
     }
 
+    @And("Pengguna mengisi firstname")
+    public void Pengguna_mengisi_firstname(){checkoutPage.inputFirstname();}
+
+    @Then("User tidak berhasil melakukan checkout dengan status last name is required")
+    public void User_tidak_berhasil_melakukan_checkout_dengan_status_last_name_is_required(){
+        Assert.assertEquals(checkoutPage.getTxtInvalidLastName(),"Error: Last Name is required");
+    }
+
 }

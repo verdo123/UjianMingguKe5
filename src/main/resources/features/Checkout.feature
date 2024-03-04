@@ -11,8 +11,16 @@ Feature: Proses user melakukan checkout barang
 
 #Negative case --------------------------------------
 
-  Scenario: Pengguna tidak dapat melakukan checkout barang
+  Scenario: Pengguna tidak mengisi kolom informasi
     Given Pengguna masuk ke halaman cart
     When Pengguna mengklik tombol checkout
     And Pengguna mengklik tombol continue
     Then User tidak berhasil melakukan checkout
+
+
+  Scenario: Pengguna hanya mengisi kolom first name
+    Given Pengguna masuk ke halaman cart
+    When Pengguna mengklik tombol checkout
+    And Pengguna mengisi firstname
+    And Pengguna mengklik tombol continue
+    Then User tidak berhasil melakukan checkout dengan status last name is required

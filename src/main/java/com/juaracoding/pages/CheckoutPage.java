@@ -46,6 +46,9 @@ public class CheckoutPage {
     @FindBy(xpath = "//*[@id='checkout_info_container']/div/form/div[1]/div[4]/h3")
     private WebElement TxtInvalid;
 
+    @FindBy(xpath = "//*[@id='checkout_info_container']/div/form/div[1]/div[4]")
+    private WebElement TxtInvaliLastName;
+
     //-----------------------------------------------------------------------------
     public void setBtnCart() {BtnCart.click();}
     public void setBtnCheckout(){BtnCheckout.click();}
@@ -56,6 +59,7 @@ public class CheckoutPage {
     public void setBtnFinish(){BtnFinish.click();}
     public String getTxtValidOrder(){return TxtValid.getText();}
     public String getTxtInvalidOrder(){return TxtInvalid.getText();}
+    public String getTxtInvalidLastName(){return TxtInvaliLastName.getText();}
 
 
 
