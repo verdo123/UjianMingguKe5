@@ -9,6 +9,9 @@
           <option value="jc-cucumber" />
           <option value="jc-cucumber" />
           <option value="jc-cucumber" />
+          <option value="jc-cucumber" />
+          <option value="jc-cucumber" />
+          <option value="jc-cucumber" />
         </list>
       </option>
       <option name="ignoredPackages">
@@ -17,10 +20,16 @@
           <option value="com.google.guava:guava:25.0-jre" />
           <option value="com.squareup.okhttp3:okhttp:3.11.0" />
           <option value="com.squareup.okio:okio:1.14.0" />
+          <option value="org.freemarker:freemarker:2.3.23" />
+          <option value="org.jsoup:jsoup:1.8.3" />
+          <option value="org.xerial:sqlite-jdbc:3.8.11.1" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="Not exploitable" />
